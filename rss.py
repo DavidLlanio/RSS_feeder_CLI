@@ -1,7 +1,7 @@
 # Import the necessary libraries
-import os         # Command line tools
-import argparse   # To get the command line arguments
+import argparse   # Command Line interface tools
 import feedparser # RSS parser
+import json       # Json tools
 
 
 
@@ -11,12 +11,16 @@ class RSS_Feed():
     """
     def __init__(self):
 
-        self.store_rss = False
         self.rss_parser = None
         self.parsed_args = None
 
     def parse_rss(self):
-        pass
+        rss_url = self.parsed_args["rss_url"]
+        self.rss_parser = feedparser.parse(rss_url)
+
+        if self.parsed_args["save"]:
+            pass
+
 
     def parse_cli_arguments(self):
         arg_parser = argparse.ArgumentParser(description="CLI for viewing RSS feeds")
@@ -26,7 +30,10 @@ class RSS_Feed():
 
     def run(self):
         self.parse_cli_arguments()
+        self.parse_rss()
         print(self.parsed_args)
+        print(self.rss_parser.keys())
+        print(self.rss_parser.feed.title)
 
 if __name__ == '__main__':
     runner = RSS_Feed()
