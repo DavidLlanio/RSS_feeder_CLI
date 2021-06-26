@@ -5,8 +5,8 @@ Find the project requirements here: [RSS feed reader in terminal](https://www.co
 
 ## Tech/framework used
 Built with: 
-Python v3.9
-feedparser v6.0.8
+- Python v3.9
+- feedparser v6.0.8
 
 ## Screenshots and demo
 Coming Soon
