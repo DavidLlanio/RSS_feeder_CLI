@@ -13,7 +13,7 @@ Built with:
 2. Install necessary package: ```pip install feedparser```
 4. Open terminal to directory with rss.py and run with: ```python rss.py [options]```
 
-To view usage of command line interface run: ```python rss.py -h``` or ```python rss.py --help```
+To view usage of command line interface run: ```python rss.py -h``` or ```python rss.py --help``` while in the directory
 
 ## How to use
 Once you have installed it and have navigated to the directory you can run ```python rss.py <url>``` where url is your RSS feed url. The command line interface will only take one url at a time. You can save the RSS feed url to output later with the save optiont by running ```python rss.py <url> -s``` or ```python rss.py <url> --save```
